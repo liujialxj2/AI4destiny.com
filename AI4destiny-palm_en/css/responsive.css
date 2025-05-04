@@ -1,0 +1,1705 @@
+/* 掌纹命运解析 - 响应式布局样式 */
+
+/* 大型桌面显示器 (1920px及以上) */
+@media screen and (min-width: 1921px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .main-title {
+        font-size: 4rem;
+    }
+    
+    .hero-description {
+        font-size: 1.4rem;
+    }
+}
+
+/* 桌面和笔记本电脑 (1200px到1920px) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .destiny-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 平板电脑和小型笔记本 (992px到1199px) */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .main-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-section .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .analysis-container {
+        flex-direction: column;
+    }
+    
+    .input-container, 
+    .preview-container {
+        width: 100%;
+    }
+    
+    .results-overview {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .palm-visualization, 
+    .key-findings {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .palm-visualization {
+        margin-bottom: 30px;
+    }
+    
+    .key-findings {
+        min-width: 100%;
+    }
+    
+    .destiny-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        margin-bottom: 30px;
+    }
+    
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    
+    .footer-logo, 
+    .footer-links, 
+    .footer-contact {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .emoji-palm-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .emoji-hand {
+        font-size: 100px;
+    }
+    
+    .emoji-crystal-ball {
+        font-size: 34px;
+    }
+    
+    .team-icons {
+        justify-content: center;
+    }
+}
+
+/* 大型手机和小型平板 (768px到991px) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .site-header {
+        height: 60px;
+        padding: 0;
+        transition: transform 0.3s ease;
+    }
+    
+    .site-header.nav-hidden {
+        transform: translateY(-100%);
+    }
+    
+    .site-header .container {
+        flex-direction: row;
+        height: 100%;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        margin-bottom: 0;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+    
+    .logo .tagline {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1010;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .main-nav.nav-open {
+        transform: translateX(0);
+    }
+    
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        align-items: center;
+    }
+    
+    .main-nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .main-nav ul li a {
+        font-size: 1.5rem;
+        padding: 12px 15px;
+        border-bottom: none;
+    }
+    
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active {
+        color: var(--primary-color);
+        border-bottom: none;
+    }
+    
+    .nav-cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .palm-visualization {
+        max-width: 100%;
+    }
+    
+    .key-findings {
+        max-width: 100%;
+    }
+    
+    .key-findings ul li {
+        padding-left: 25px;
+    }
+    
+    .destiny-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .analysis-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    
+    .tab-btn {
+        flex: 1 1 30%;
+        font-size: 0.9rem;
+        padding: 10px 5px;
+        text-align: center;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .save-results {
+        flex-direction: column;
+    }
+    
+    .save-btn, 
+    .share-btn, 
+    .new-analysis-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .palm-line-section {
+        padding: 15px;
+    }
+    
+    .palm-line-section h4 {
+        font-size: 1.3rem;
+    }
+    
+    .palm-line-section .analysis-text {
+        font-size: 0.95rem;
+    }
+    
+    .emoji-palm-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .emoji-hand {
+        font-size: 80px;
+    }
+    
+    .emoji-sparkle1, .emoji-sparkle2, .emoji-sparkle3 {
+        font-size: 20px;
+    }
+    
+    .emoji-crystal-ball {
+        font-size: 30px;
+        bottom: 5%;
+    }
+    
+    .about-visual {
+        padding: 20px;
+    }
+    
+    .team-icon {
+        margin: 0 10px;
+    }
+    
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-emoji {
+        font-size: 30px;
+    }
+    
+    .about-quote blockquote {
+        font-size: 1.2rem;
+    }
+    
+    /* 分析过程布局优化 */
+    #processTab .process-visualization {
+        flex-direction: column;
+    }
+    
+    #processTab .palm-image-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    #processTab .detection-parameters {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .parameters-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .parameter-group {
+        margin-bottom: 10px;
+    }
+    
+    .parameters-table {
+        font-size: 0.8rem;
+    }
+    
+    .parameters-table th, .parameters-table td {
+        padding: 6px 3px;
+    }
+    
+    /* 核心掌纹选项卡优化 */
+    .palm-lines-analysis {
+        gap: 15px;
+    }
+    
+    .palm-line-section {
+        padding: 15px;
+    }
+    
+    .palm-line-section h4 {
+        font-size: 1.3rem;
+    }
+    
+    .palm-line-section .analysis-text {
+        font-size: 0.95rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text {
+        margin-bottom: 30px;
+    }
+    
+    .footer-content {
+        flex-wrap: wrap;
+    }
+    
+    .footer-logo, 
+    .footer-links, 
+    .footer-contact {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .emoji-palm-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .emoji-hand {
+        font-size: 100px;
+    }
+    
+    .emoji-crystal-ball {
+        font-size: 34px;
+    }
+    
+    .team-icons {
+        justify-content: center;
+    }
+    
+    /* 显示移动端固定CTA按钮 */
+    .mobile-cta-button {
+        display: block;
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    /* 流程步骤容器优化 */
+    .process-flow-container,
+    .palm-landmarks-container,
+    .palmlines-analysis-container,
+    .results-demo-container {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    /* 流程步骤布局优化 */
+    .process-flow {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .process-step {
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 5px;
+    }
+    
+    .process-arrow {
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+    
+    .step-content {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        box-sizing: border-box;
+    }
+    
+    /* 掌纹分析示例溢出修复 */
+    .palm-landmarks-demo {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .palm-outline {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 3/4;
+        margin: 0 auto 20px;
+    }
+    
+    .landmarks-info {
+        width: 100%;
+        padding: 0 5px;
+    }
+    
+    /* 掌纹线特征分析优化 */
+    .palmlines-examples {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .palmline-example {
+        margin-bottom: 20px;
+        padding: 0 5px;
+    }
+    
+    .palmline-example h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .example-visual {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .line-type-demo {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+    
+    /* 结果示例优化 */
+    .demo-tab-content {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .demo-destiny-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+    .demo-destiny-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* 处理表格溢出 */
+    .parameters-table {
+        width: 100%;
+        font-size: 0.85rem;
+        table-layout: fixed;
+    }
+    
+    .parameters-table th, 
+    .parameters-table td {
+        padding: 5px 3px;
+        word-break: break-word;
+    }
+    
+    /* 改进内容展示的间距和对齐 */
+    .subsection-title {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem;
+    }
+    
+    /* 展示模块内容优化 */
+    .demo-tab-panel {
+        padding: 12px 8px;
+    }
+    
+    .demo-reading {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* 手掌关键点指示标签优化 */
+    .line-label {
+        padding: 3px 6px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    
+    /* 修复小屏幕上的内容滚动 */
+    .parameters-table-container {
+        margin-bottom: 10px;
+    }
+    
+    /* 优化手掌关键点示意图 */
+    .palm-shape {
+        width: 180px;
+        height: 250px;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* 修复手腕基点位置 */
+    .wrist {
+        top: 310px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* 修复指关节位置 */
+    .finger {
+        transform-origin: bottom center;
+        transform: scale(0.85);
+    }
+    
+    .thumb {
+        width: 35px;
+        height: 90px;
+        top: 180px;
+        left: calc(50% - 65px);
+        transform: rotate(-30deg) scale(0.85);
+    }
+    
+    .index {
+        width: 30px;
+        height: 110px;
+        top: 50px;
+        left: calc(50% - 45px);
+    }
+    
+    .middle {
+        width: 30px;
+        height: 120px;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.85);
+    }
+    
+    .ring {
+        width: 30px;
+        height: 110px;
+        top: 50px;
+        left: calc(50% + 15px);
+    }
+    
+    .pinky {
+        width: 25px;
+        height: 80px;
+        top: 75px;
+        left: calc(50% + 45px);
+    }
+    
+    /* 修改掌纹线位置 */
+    .life-line {
+        width: 55px;
+        height: 130px;
+        top: 150px;
+        left: calc(50% - 30px);
+    }
+    
+    .head-line {
+        width: 120px;
+        height: 18px;
+        top: 200px;
+        left: calc(50% - 60px);
+    }
+    
+    .heart-line {
+        width: 130px;
+        height: 25px;
+        top: 170px;
+        left: calc(50% - 70px);
+    }
+    
+    .life-line-label {
+        top: 190px;
+        left: calc(50% - 55px);
+    }
+    
+    .head-line-label {
+        top: 205px;
+        left: calc(50% - 10px);
+    }
+    
+    .heart-line-label {
+        top: 160px;
+        left: calc(50% - 20px);
+    }
+    
+    /* 中型手机上的固定CTA按钮样式调整 */
+    .mobile-cta-button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        width: 90%;
+        max-width: 280px;
+        bottom: 15px;
+    }
+    
+    /* 暗色模式下手掌关键点的适配 */
+    .palm-outline {
+        background-color: rgba(30, 30, 40, 0.8);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .palm-shape {
+        background-color: rgba(40, 40, 55, 0.8);
+        border-color: rgba(156, 15, 95, 0.5);
+    }
+    
+    .joint {
+        background-color: var(--accent-color);
+        box-shadow: 0 0 8px rgba(156, 15, 95, 0.6);
+    }
+    
+    .palm-line {
+        border-width: 2.5px;
+    }
+    
+    .line-label {
+        background-color: rgba(40, 40, 55, 0.9);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        padding: 3px 7px;
+        font-weight: bold;
+    }
+    
+    .steps-list {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .steps-list li {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        padding-left: 5px;
+    }
+    
+    .steps-list li::before {
+        left: -1.5rem;
+        font-size: 0.7rem;
+        top: 0.2rem;
+    }
+}
+
+/* 中型手机 (576px到767px) */
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 540px;
+        padding: 0 15px;
+    }
+    
+    .nav-cta-button {
+        width: 90%;
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .input-container, 
+    .preview-container, 
+    .results-container {
+        padding: 20px;
+    }
+    
+    .upload-box {
+        padding: 20px 10px;
+    }
+    
+    .detailed-analysis {
+        margin-bottom: 20px;
+    }
+    
+    .tab-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    
+    .palm-line-section {
+        padding: 12px;
+    }
+    
+    .palm-line-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .palm-line-section .analysis-text {
+        font-size: 1rem;
+    }
+    
+    .emoji-palm-container {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .emoji-hand {
+        font-size: 70px;
+    }
+    
+    .team-icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-emoji {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+    
+    .icon-text {
+        font-size: 12px;
+    }
+    
+    .parameter-group h5 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .parameter-value {
+        font-size: 0.9rem;
+    }
+    
+    .parameter-description {
+        font-size: 0.8rem;
+    }
+    
+    /* 减小内边距，解决内容溢出 */
+    .process-flow-container, 
+    .palm-landmarks-container,
+    .palmlines-analysis-container,
+    .results-demo-container {
+        padding: 12px 8px;
+    }
+    
+    /* 调整流程步骤组件大小 */
+    .process-step {
+        max-width: 240px;
+    }
+    
+    .step-content {
+        padding: 10px;
+    }
+    
+    .step-content h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .step-content p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+    
+    /* 调整示例组件大小 */
+    .line-type-demo {
+        max-width: 220px;
+        padding: 10px;
+    }
+    
+    .demo-label, .demo-meaning {
+        font-size: 0.85rem;
+    }
+    
+    /* 改善表格在小屏幕上的显示 */
+    .parameters-table {
+        font-size: 0.8rem;
+    }
+    
+    /* 优化手掌关键点示意图 */
+    .palm-shape {
+        width: 180px;
+        height: 250px;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* 修复手腕基点位置 */
+    .wrist {
+        top: 310px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* 修复指关节位置 */
+    .finger {
+        transform-origin: bottom center;
+        transform: scale(0.85);
+    }
+    
+    .thumb {
+        width: 35px;
+        height: 90px;
+        top: 180px;
+        left: calc(50% - 65px);
+        transform: rotate(-30deg) scale(0.85);
+    }
+    
+    .index {
+        width: 30px;
+        height: 110px;
+        top: 50px;
+        left: calc(50% - 45px);
+    }
+    
+    .middle {
+        width: 30px;
+        height: 120px;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.85);
+    }
+    
+    .ring {
+        width: 30px;
+        height: 110px;
+        top: 50px;
+        left: calc(50% + 15px);
+    }
+    
+    .pinky {
+        width: 25px;
+        height: 80px;
+        top: 75px;
+        left: calc(50% + 45px);
+    }
+    
+    /* 修改掌纹线位置 */
+    .life-line {
+        width: 55px;
+        height: 130px;
+        top: 150px;
+        left: calc(50% - 30px);
+    }
+    
+    .head-line {
+        width: 120px;
+        height: 18px;
+        top: 200px;
+        left: calc(50% - 60px);
+    }
+    
+    .heart-line {
+        width: 130px;
+        height: 25px;
+        top: 170px;
+        left: calc(50% - 70px);
+    }
+    
+    .life-line-label {
+        top: 190px;
+        left: calc(50% - 55px);
+    }
+    
+    .head-line-label {
+        top: 205px;
+        left: calc(50% - 10px);
+    }
+    
+    .heart-line-label {
+        top: 160px;
+        left: calc(50% - 20px);
+    }
+    
+    /* 中型手机上的固定CTA按钮样式调整 */
+    .mobile-cta-button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        width: 90%;
+        max-width: 280px;
+        bottom: 15px;
+    }
+    
+    .steps-list li::before {
+        left: -1.3rem;
+    }
+}
+
+/* 小型手机 (575px及以下) */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 100px 0 50px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .cta-button, 
+    .upload-btn, 
+    .camera-btn, 
+    .capture-btn, 
+    .analyze-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo .tagline {
+        font-size: 0.8rem;
+    }
+    
+    .main-nav ul li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .feature-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .results-title {
+        font-size: 1.5rem;
+    }
+    
+    .tab-btn {
+        flex: 1 1 100%;
+        margin-right: 0;
+        font-size: 0.85rem;
+        padding: 8px 5px;
+    }
+    
+    .tab-panel h3 {
+        font-size: 1.3rem;
+    }
+    
+    .destiny-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-logo h2 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-links h3, 
+    .footer-contact h3 {
+        font-size: 1.2rem;
+    }
+    
+    .palm-line-section h4 {
+        font-size: 1.2rem;
+    }
+    
+    .palm-line-section .analysis-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .emoji-palm-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .emoji-hand {
+        font-size: 60px;
+    }
+    
+    .emoji-sparkle1, .emoji-sparkle2, .emoji-sparkle3 {
+        font-size: 16px;
+    }
+    
+    .emoji-crystal-ball {
+        font-size: 22px;
+        bottom: 5%;
+    }
+    
+    .about-quote blockquote {
+        font-size: 1rem;
+    }
+    
+    #processTab .palm-image-container {
+        margin-bottom: 20px;
+    }
+    
+    .steps-list {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .steps-list li {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .steps-list li::before {
+        left: -1.3rem;
+    }
+    
+    .parameter-group h5 {
+        font-size: 0.9rem;
+    }
+    
+    .parameters-table {
+        font-size: 0.75rem;
+    }
+    
+    .parameter-value {
+        font-size: 0.9rem;
+    }
+    
+    .parameter-description {
+        font-size: 0.8rem;
+    }
+    
+    /* 进一步减少内容区域边距 */
+    .process-flow-container, 
+    .palm-landmarks-container,
+    .palmlines-analysis-container,
+    .results-demo-container {
+        padding: 10px 5px;
+    }
+    
+    /* 流程步骤最小屏幕优化 */
+    .process-step {
+        max-width: 200px;
+    }
+    
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    
+    /* 示例模块最小屏幕优化 */
+    .line-type-demo {
+        max-width: 180px;
+        padding: 8px;
+    }
+    
+    /* 表格内容优化 */
+    .parameters-table th, 
+    .parameters-table td {
+        padding: 4px 2px;
+        font-size: 0.75rem;
+    }
+    
+    /* 确保所有内容容器不溢出 */
+    .container,
+    .process-flow-container,
+    .palm-landmarks-container,
+    .palmlines-analysis-container,
+    .results-demo-container,
+    .palm-landmarks-demo,
+    .palmlines-examples,
+    .example-visual,
+    .demo-tab-panel,
+    .parameters-grid,
+    .parameter-group {
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    /* 小屏幕下进一步调整手掌关键点位置 */
+    .palm-outline {
+        height: 380px;
+    }
+    
+    .palm-shape {
+        width: 160px;
+        height: 220px;
+    }
+    
+    .wrist {
+        top: 280px;
+    }
+    
+    /* 更小屏幕下的进一步调整 */
+    .thumb {
+        width: 30px;
+        height: 80px;
+        top: 160px;
+        left: calc(50% - 57px);
+    }
+    
+    .index {
+        width: 25px;
+        height: 100px;
+        top: 45px;
+        left: calc(50% - 40px);
+    }
+    
+    .middle {
+        width: 25px;
+        height: 110px;
+        top: 30px;
+    }
+    
+    .ring {
+        width: 25px;
+        height: 100px;
+        top: 45px;
+        left: calc(50% + 15px);
+    }
+    
+    .pinky {
+        width: 22px;
+        height: 70px;
+        top: 70px;
+        left: calc(50% + 40px);
+    }
+    
+    /* 掌纹线位置调整 */
+    .life-line {
+        width: 45px;
+        height: 110px;
+        top: 140px;
+        left: calc(50% - 25px);
+    }
+    
+    .head-line {
+        width: 100px;
+        height: 15px;
+        top: 180px;
+        left: calc(50% - 50px);
+    }
+    
+    .heart-line {
+        width: 110px;
+        height: 22px;
+        top: 150px;
+        left: calc(50% - 60px);
+    }
+    
+    .life-line-label {
+        top: 170px;
+        left: calc(50% - 45px);
+    }
+    
+    .head-line-label {
+        top: 185px;
+        left: calc(50% - 10px);
+    }
+    
+    .heart-line-label {
+        top: 140px;
+        left: calc(50% - 15px);
+    }
+    
+    /* 小型手机上的固定CTA按钮样式调整 */
+    .mobile-cta-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        width: 90%;
+        max-width: 250px;
+        bottom: 10px;
+    }
+}
+
+/* 高度响应式调整 */
+@media screen and (max-height: 700px) {
+    .hero-section {
+        padding: 100px 0 50px;
+    }
+    
+    .section-title {
+        margin-bottom: 30px;
+    }
+    
+    .how-it-works, 
+    .analysis-section, 
+    .about-section {
+        padding: 50px 0;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .site-header, 
+    .hero-section, 
+    .how-it-works, 
+    .input-container, 
+    .camera-container, 
+    .save-results, 
+    .site-footer {
+        display: none;
+    }
+    
+    .results-container {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .results-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .results-overview {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .detailed-analysis {
+        page-break-before: always;
+    }
+    
+    .destiny-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .destiny-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* 夜间模式自适应 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-mode-bg);
+        color: var(--dark-mode-text);
+    }
+    
+    .site-header {
+        background-color: rgba(26, 26, 46, 0.95);
+    }
+    
+    .logo h1, 
+    h1, h2, h3, h4, h5, h6,
+    .section-title,
+    .main-title {
+        color: var(--dark-mode-highlight);
+    }
+    
+    .logo .tagline, 
+    p, .hero-description,
+    .small-text {
+        color: var(--dark-mode-text);
+    }
+    
+    .main-nav ul li a {
+        color: var(--dark-mode-text);
+    }
+    
+    .main-nav ul li a:hover, 
+    .main-nav ul li a.active {
+        color: var(--dark-mode-highlight);
+    }
+    
+    .nav-cta-button {
+        background-color: var(--dark-mode-highlight);
+        color: var(--dark-bg) !important;
+    }
+    
+    .nav-cta-button:hover {
+        background-color: var(--dark-mode-primary);
+        color: var(--dark-mode-text) !important;
+    }
+    
+    .hero-section {
+        background-image: linear-gradient(135deg, rgba(156, 15, 95, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .feature-card, 
+    .input-container, 
+    .preview-container, 
+    .results-container, 
+    .how-it-works, 
+    .about-section {
+        background-color: var(--dark-mode-card-bg);
+    }
+    
+    .upload-box {
+        border-color: var(--dark-mode-primary);
+    }
+    
+    .or-divider span {
+        background-color: var(--dark-mode-card-bg);
+        color: var(--dark-mode-secondary-text);
+    }
+    
+    .form-group label {
+        color: var(--dark-mode-text);
+    }
+    
+    .form-group select {
+        background-color: #2e2e2e;
+        color: var(--dark-mode-text);
+        border-color: var(--dark-mode-border);
+    }
+    
+    .tab-btn {
+        color: var(--dark-mode-secondary-text);
+    }
+    
+    .tab-btn.active {
+        color: var(--dark-mode-highlight);
+        border-bottom-color: var(--dark-mode-highlight);
+    }
+    
+    /* 工作原理部分暗色模式优化 */
+    .process-flow-container,
+    .palm-landmarks-container,
+    .palmlines-analysis-container,
+    .results-demo-container {
+        background-color: var(--dark-mode-card-bg);
+        box-shadow: var(--dark-mode-card-shadow);
+    }
+    
+    /* 流程步骤暗色模式优化 */
+    .step-content {
+        background-color: rgba(42, 42, 50, 0.8);
+        box-shadow: var(--dark-mode-card-shadow);
+        border: 1px solid rgba(156, 15, 95, 0.3);
+    }
+    
+    .step-content h4 {
+        color: #ffcb6b; /* 明亮的金黄色 */
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(255, 203, 107, 0.3);
+    }
+    
+    .step-content p {
+        color: var(--dark-mode-text);
+    }
+    
+    /* 手掌关键点示意暗色模式优化 */
+    .palm-outline {
+        background-color: rgba(42, 42, 50, 0.8);
+        box-shadow: var(--dark-mode-card-shadow);
+    }
+    
+    .palm-shape {
+        background-color: rgba(50, 50, 50, 0.8);
+        border-color: var(--dark-mode-border);
+    }
+    
+    .line-label {
+        background-color: rgba(40, 40, 50, 0.8);
+        color: var(--dark-mode-text);
+    }
+    
+    .landmarks-info p,
+    .landmarks-info li {
+        color: var(--dark-mode-text);
+    }
+    
+    /* 掌纹线特征分析示例暗色模式优化 */
+    .line-type-demo {
+        background-color: rgba(42, 42, 50, 0.8);
+        box-shadow: var(--dark-mode-card-shadow);
+    }
+    
+    .demo-meaning {
+        color: var(--dark-mode-secondary-text);
+    }
+    
+    /* 分析结果示例暗色模式优化 */
+    .demo-tab-panel {
+        background-color: rgba(42, 42, 50, 0.8);
+    }
+    
+    .demo-reading {
+        color: var(--dark-mode-text);
+    }
+    
+    .demo-destiny-card {
+        background-color: var(--dark-mode-card-bg);
+        box-shadow: var(--dark-mode-card-shadow);
+    }
+    
+    .demo-destiny-card p {
+        color: var(--dark-mode-text);
+    }
+    
+    .destiny-card {
+        background-color: var(--dark-mode-card-bg);
+    }
+    
+    .destiny-card h4 {
+        color: var(--dark-mode-highlight);
+    }
+    
+    .destiny-content {
+        color: var(--dark-mode-text);
+    }
+    
+    .palm-line-section {
+        background-color: var(--dark-mode-card-bg);
+    }
+    
+    .palm-line-section h4 {
+        border-bottom-color: var(--dark-mode-border);
+    }
+    
+    .palm-line-section .analysis-text {
+        color: var(--dark-mode-text);
+    }
+    
+    .emoji-palm-container {
+        background: linear-gradient(135deg, rgba(156, 15, 95, 0.2) 0%, rgba(75, 0, 130, 0.2) 100%);
+    }
+    
+    .palm-expert {
+        background: linear-gradient(135deg, #9c0f5f30, #9c0f5f50);
+        border-color: var(--dark-mode-border);
+    }
+    
+    .ai-engineer {
+        background: linear-gradient(135deg, #4b008230, #4b008250);
+        border-color: var(--dark-mode-border);
+    }
+    
+    .ux-designer {
+        background: linear-gradient(135deg, #d4af3730, #d4af3750);
+        border-color: var(--dark-mode-border);
+    }
+    
+    .icon-text {
+        color: var(--dark-mode-text);
+    }
+    
+    .about-quote {
+        background-color: rgba(156, 15, 95, 0.15);
+    }
+    
+    /* 分析过程部分暗色模式优化 */
+    #processTab .palm-image-container {
+        background-color: var(--dark-mode-card-bg);
+        box-shadow: var(--dark-mode-card-shadow);
+    }
+    
+    .detection-parameters {
+        background-color: var(--dark-mode-card-bg);
+    }
+    
+    .steps-list li {
+        color: var(--dark-mode-text);
+    }
+    
+    .parameter-group {
+        background-color: rgba(50, 50, 60, 0.8);
+    }
+    
+    .parameter-value {
+        color: var(--dark-mode-text);
+    }
+    
+    .parameter-description {
+        color: var(--dark-mode-secondary-text);
+    }
+    
+    .parameters-table th {
+        background-color: rgba(60, 60, 70, 0.9);
+        color: var(--dark-mode-highlight);
+    }
+    
+    .parameters-table td {
+        color: var(--dark-mode-text);
+    }
+    
+    .parameters-table td, .parameters-table th {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+    
+    .menu-toggle span {
+        background-color: var(--dark-mode-highlight);
+    }
+    
+    .main-nav.nav-open {
+        background-color: rgba(26, 26, 46, 0.97);
+    }
+    
+    /* 优化移动端暗色模式下的链接颜色 */
+    @media screen and (max-width: 768px) {
+        /* 导航和标签样式 */
+        .main-nav ul li a {
+            color: #ff9eb7;
+            font-size: 1.3rem;
+        }
+        
+        .main-nav ul li a:hover, 
+        .main-nav ul li a.active {
+            color: var(--dark-mode-highlight);
+        }
+        
+        .tab-btn {
+            color: #d8d8d8;
+            background-color: rgba(50, 50, 60, 0.5);
+            margin: 2px;
+            border-radius: 4px;
+        }
+        
+        .tab-btn.active {
+            background-color: rgba(156, 15, 95, 0.3);
+            color: var(--dark-mode-highlight);
+            border-bottom: none;
+        }
+        
+        /* 流程步骤样式 */
+        .process-step {
+            background-color: rgba(40, 40, 50, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(156, 15, 95, 0.3);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .step-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #ffcb6b;
+            text-shadow: 0 0 4px rgba(255, 203, 107, 0.3);
+        }
+        
+        .process-arrow {
+            font-size: 1.8rem;
+            color: #ff9eb7;
+            text-shadow: 0 0 8px rgba(156, 15, 95, 0.5);
+            margin: 5px 0;
+        }
+        
+        /* 暗色模式下手掌关键点的适配 */
+        .palm-outline {
+            background-color: rgba(30, 30, 40, 0.8);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .palm-shape {
+            background-color: rgba(40, 40, 55, 0.8);
+            border-color: rgba(156, 15, 95, 0.5);
+        }
+        
+        .joint {
+            background-color: var(--accent-color);
+            box-shadow: 0 0 8px rgba(156, 15, 95, 0.6);
+        }
+        
+        .palm-line {
+            border-width: 2.5px;
+        }
+        
+        .line-label {
+            background-color: rgba(40, 40, 55, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 3px 7px;
+            font-weight: bold;
+        }
+    }
+    
+    /* 暗色模式下的移动端固定按钮 */
+    .mobile-cta-button {
+        background-color: var(--dark-mode-primary);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(156, 15, 95, 0.4);
+        color: var(--dark-mode-text);
+    }
+    
+    .mobile-cta-button:hover, .mobile-cta-button:active {
+        background-color: var(--dark-mode-highlight);
+        color: var(--dark-bg);
+    }
+    
+    /* 暗色模式下的容器背景增强 */
+    .process-flow-container,
+    .palm-landmarks-container,
+    .palmlines-analysis-container,
+    .results-demo-container {
+        background-color: rgba(40, 40, 50, 0.8);
+        box-shadow: var(--dark-mode-card-shadow);
+        border: 1px solid rgba(156, 15, 95, 0.2);
+    }
+    
+    /* 暗色模式下改善步骤可见性 */
+    .process-step {
+        margin-bottom: 15px;
+    }
+}
+
+/* 减少动画 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} 
