@@ -1,0 +1,766 @@
+/* 掌纹命运解析 - 动画效果样式 */
+
+/* 淡入淡出动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+/* 滑入动画 */
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-up {
+    animation: slideInUp 0.5s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+/* 缩放动画 */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scale-in {
+    animation: scaleIn 0.8s ease forwards;
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* 掌纹线条动画 */
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.draw-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease forwards;
+}
+
+/* 分析进度条动画 */
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.analyzing {
+    animation: progressAnimation 3s ease-in-out forwards;
+}
+
+/* 标记点闪烁动画 */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    animation: blink 0.5s ease-in-out;
+}
+
+/* 结果卡片出现动画 */
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-reveal {
+    opacity: 0;
+    animation: cardReveal 0.5s ease forwards;
+}
+
+/* 为结果区域中的卡片添加延迟显示 */
+.destiny-grid .destiny-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.destiny-grid .destiny-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.destiny-grid .destiny-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.destiny-grid .destiny-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.destiny-grid .destiny-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.destiny-grid .destiny-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.destiny-grid .destiny-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+/* 掌纹解读单独展示动画 */
+@keyframes lineHighlight {
+    0% {
+        stroke-width: 2;
+        filter: drop-shadow(0 0 0 rgba(156, 15, 95, 0.5));
+    }
+    50% {
+        stroke-width: 4;
+        filter: drop-shadow(0 0 5px rgba(156, 15, 95, 0.8));
+    }
+    100% {
+        stroke-width: 2;
+        filter: drop-shadow(0 0 0 rgba(156, 15, 95, 0.5));
+    }
+}
+
+.highlight-line {
+    animation: lineHighlight 2s infinite ease-in-out;
+}
+
+/* 按钮波纹效果 */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+
+/* 神秘光环效果 */
+@keyframes mysticalGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(156, 15, 95, 0.3),
+                   0 0 10px rgba(156, 15, 95, 0.2),
+                   0 0 15px rgba(156, 15, 95, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 10px rgba(156, 15, 95, 0.5),
+                   0 0 20px rgba(156, 15, 95, 0.3),
+                   0 0 30px rgba(156, 15, 95, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(156, 15, 95, 0.3),
+                   0 0 10px rgba(156, 15, 95, 0.2),
+                   0 0 15px rgba(156, 15, 95, 0.1);
+    }
+}
+
+.mystical-glow {
+    animation: mysticalGlow 3s infinite ease-in-out;
+}
+
+/* 文字渐显 */
+@keyframes revealText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-text {
+    opacity: 0;
+}
+
+.reveal-text.active {
+    animation: revealText 0.8s ease forwards;
+}
+
+/* 导航链接下划线动画 */
+@keyframes underlineExpand {
+    from {
+        width: 0;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* 页面载入动画 */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-transition.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--secondary-color);
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 旋转入场 */
+@keyframes rotateIn {
+    from {
+        transform: rotate(-10deg) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.rotate-in {
+    animation: rotateIn 1s ease forwards;
+}
+
+/* 上浮动画 */
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.float {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+/* 关键点淡入动画 */
+@keyframes fadeInPoints {
+    from {
+        opacity: 0;
+        r: 1;
+    }
+    to {
+        opacity: 1;
+        r: 3;
+    }
+}
+
+.landmark-point {
+    animation: fadeInPoints 0.5s ease-out forwards;
+}
+
+/* 掌纹标记淡入动画 */
+@keyframes fadeInMarkers {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.palm-markers text, 
+.landmark-legend, 
+.palm-line-legend, 
+.result-legend {
+    animation: fadeInMarkers 1s ease-out forwards;
+}
+
+/* 结果卡片顺序淡入 */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destiny-card {
+    opacity: 0;
+    animation: cardAppear 0.6s ease forwards;
+}
+
+/* 为不同卡片添加不同的延迟，使其按顺序显示 */
+#careerDestiny {
+    animation-delay: 0.1s;
+}
+
+#wealthDestiny {
+    animation-delay: 0.2s;
+}
+
+#healthDestiny {
+    animation-delay: 0.3s;
+}
+
+#loveDestiny {
+    animation-delay: 0.4s;
+}
+
+#socialDestiny {
+    animation-delay: 0.5s;
+}
+
+#wisdomDestiny {
+    animation-delay: 0.6s;
+}
+
+#potentialDestiny {
+    animation-delay: 0.7s;
+}
+
+/* emoji掌纹动画增强 */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes crystalBallGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.6);
+        transform: scale(1.1) translateY(-5px);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        transform: scale(1) translateY(0);
+    }
+}
+
+.emoji-hand {
+    animation: float 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.emoji-sparkle1 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+.emoji-sparkle2 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.emoji-sparkle3 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+.emoji-crystal-ball {
+    animation: crystalBallGlow 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+}
+
+/* 暗色模式下的动画增强 */
+@media (prefers-color-scheme: dark) {
+    /* 在暗色模式下增强emoji动画效果 */
+    @keyframes darkModeTwinkle {
+        0% {
+            opacity: 0.3;
+            transform: scale(0.8);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+        100% {
+            opacity: 0.3;
+            transform: scale(0.8);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+    }
+    
+    @keyframes darkModeCrystalBallGlow {
+        0% {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 15px rgba(156, 15, 95, 0.5);
+            transform: scale(1) translateY(0);
+        }
+        50% {
+            text-shadow: 0 0 25px rgba(212, 175, 55, 1), 0 0 40px rgba(156, 15, 95, 0.8);
+            transform: scale(1.15) translateY(-8px);
+        }
+        100% {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7), 0 0 15px rgba(156, 15, 95, 0.5);
+            transform: scale(1) translateY(0);
+        }
+    }
+    
+    @keyframes darkModeHandGlow {
+        0% {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        50% {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(156, 15, 95, 0.6);
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+    }
+    
+    .emoji-hand {
+        animation: float 4s ease-in-out infinite, darkModeHandGlow 3s ease-in-out infinite;
+        transform-origin: center;
+    }
+    
+    .emoji-sparkle1,
+    .emoji-sparkle2,
+    .emoji-sparkle3 {
+        animation: darkModeTwinkle 2s ease-in-out infinite;
+    }
+    
+    .emoji-sparkle1 {
+        animation-delay: 0.2s;
+    }
+    
+    .emoji-sparkle2 {
+        animation-delay: 0.5s;
+    }
+    
+    .emoji-sparkle3 {
+        animation-delay: 0.8s;
+    }
+    
+    .emoji-crystal-ball {
+        animation: darkModeCrystalBallGlow 3s ease-in-out infinite;
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    }
+    
+    /* 其他暗色模式动画优化 */
+    @keyframes darkModeLineHighlight {
+        0% {
+            stroke-width: 2;
+            filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+        }
+        50% {
+            stroke-width: 4;
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.8));
+        }
+        100% {
+            stroke-width: 2;
+            filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+        }
+    }
+    
+    .highlight-line {
+        animation: darkModeLineHighlight 2s infinite ease-in-out;
+    }
+    
+    /* 掌纹标记在暗色模式下的增强 */
+    .landmark-point {
+        fill: var(--secondary-color);
+        stroke: var(--dark-bg);
+        stroke-width: 1;
+        filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+    }
+    
+    /* 按钮波纹效果在暗色模式下 */
+    .ripple:after {
+        background-image: radial-gradient(circle, rgba(212, 175, 55, 0.3) 10%, transparent 10.01%);
+    }
+
+    /* 暗色模式下标题光晕效果 */
+    @keyframes stepTitleGlow {
+        0% {
+            text-shadow: 0 0 5px rgba(255, 203, 107, 0.3);
+        }
+        50% {
+            text-shadow: 0 0 10px rgba(255, 203, 107, 0.6), 0 0 15px rgba(255, 203, 107, 0.4);
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(255, 203, 107, 0.3);
+        }
+    }
+    
+    .step-content h4 {
+        animation: stepTitleGlow 3s ease-in-out infinite;
+    }
+    
+    .process-step:hover .step-content h4 {
+        animation: stepTitleGlow 1.5s ease-in-out infinite;
+    }
+
+    /* 暗色模式动画增强 */
+    @keyframes darkModeEmojiBounce {
+        0% { transform: translateY(0) rotate(10deg); }
+        50% { transform: translateY(-10px) rotate(10deg); }
+        100% { transform: translateY(0) rotate(10deg); }
+    }
+    
+    .emoji-hand {
+        animation: darkModeEmojiBounce 3s ease-in-out infinite;
+        filter: drop-shadow(0 0 10px rgba(156, 15, 95, 0.5));
+        transform-origin: bottom center;
+    }
+    
+    @keyframes darkModeEmojiSparkle {
+        0% { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+        50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+        100% { opacity: 0.2; transform: scale(0.8) rotate(360deg); }
+    }
+    
+    .emoji-sparkle1, .emoji-sparkle2, .emoji-sparkle3 {
+        animation: darkModeEmojiSparkle 4s ease-in-out infinite;
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+    
+    .emoji-sparkle1 {
+        animation-delay: 0s;
+    }
+    
+    .emoji-sparkle2 {
+        animation-delay: 0.8s;
+    }
+    
+    .emoji-sparkle3 {
+        animation-delay: 1.6s;
+    }
+    
+    @keyframes darkModeCrystalBallGlow {
+        0% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3)); }
+        50% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.7)); }
+        100% { filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3)); }
+    }
+    
+    .emoji-crystal-ball {
+        animation: darkModeCrystalBallGlow 3s ease-in-out infinite;
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+    }
+    
+    /* 暗色模式下检测步骤的发光效果 - 新增 */
+    @keyframes stepItemGlow {
+        0% {
+            text-shadow: 0 0 5px rgba(255, 235, 181, 0.3);
+            transform: translateX(0);
+        }
+        50% {
+            text-shadow: 0 0 10px rgba(255, 235, 181, 0.6), 0 0 15px rgba(255, 235, 181, 0.4);
+            transform: translateX(3px);
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(255, 235, 181, 0.3);
+            transform: translateX(0);
+        }
+    }
+    
+    .steps-list li:hover {
+        animation: stepItemGlow 1.5s ease-in-out infinite;
+    }
+    
+    /* 检测步骤前标记的旋转动画 */
+    @keyframes stepMarkerRotate {
+        0% {
+            transform: rotate(0deg);
+            color: var(--dark-mode-highlight);
+        }
+        50% {
+            transform: rotate(180deg);
+            color: #ff9eb7;
+        }
+        100% {
+            transform: rotate(360deg);
+            color: var(--dark-mode-highlight);
+        }
+    }
+    
+    .steps-list li:hover::before {
+        animation: stepMarkerRotate 2s ease-in-out infinite;
+        text-shadow: 0 0 8px rgba(255, 158, 183, 0.6);
+        transform-origin: center;
+    }
+    
+    /* 其他暗色模式动画优化 */
+    @keyframes darkModeLineHighlight {
+        0% {
+            stroke-width: 2;
+            filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+        }
+        50% {
+            stroke-width: 4;
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.8));
+        }
+        100% {
+            stroke-width: 2;
+            filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+        }
+    }
+} 
